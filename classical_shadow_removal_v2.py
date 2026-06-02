@@ -74,6 +74,9 @@ class ComponentParams:
     correction_strength: float = 1.0
     aggressive_sigma_frac: float = 0.055
     contrast_percentiles: Tuple[float, float] = (0.5, 99.5)
+    w_mean: float = 0.45
+    w_zscore: float = 0.35
+    w_retinex: float = 0.20
 
 
 COMPONENT_PARAMS: Dict[str, ComponentParams] = {
@@ -87,6 +90,7 @@ COMPONENT_PARAMS: Dict[str, ComponentParams] = {
         seam_blend_frac=0.020,
         correction_strength=1.65,
         aggressive_sigma_frac=0.040,
+        w_mean=0.10, w_zscore=0.80, w_retinex=0.10,
     ),
     "J4": ComponentParams(
         sigma_frac=0.070,
@@ -97,6 +101,7 @@ COMPONENT_PARAMS: Dict[str, ComponentParams] = {
         seam_blend_frac=0.020,
         correction_strength=1.65,
         aggressive_sigma_frac=0.040,
+        w_mean=0.10, w_zscore=0.80, w_retinex=0.10,
     ),
     # Smaller component crops. Slightly tighter background estimation.
     "U29": ComponentParams(
@@ -108,6 +113,7 @@ COMPONENT_PARAMS: Dict[str, ComponentParams] = {
         seam_blend_frac=0.030,
         correction_strength=1.85,
         aggressive_sigma_frac=0.060,
+        w_mean=0.50, w_zscore=0.40, w_retinex=0.10,
     ),
     "U30": ComponentParams(
         sigma_frac=0.090,
@@ -118,6 +124,7 @@ COMPONENT_PARAMS: Dict[str, ComponentParams] = {
         seam_blend_frac=0.030,
         correction_strength=1.85,
         aggressive_sigma_frac=0.060,
+        w_mean=0.50, w_zscore=0.40, w_retinex=0.10,
     ),
 }
 
@@ -454,7 +461,7 @@ def aggressive_local_combo(img: np.ndarray, params: ComponentParams) -> np.ndarr
     mean_eq = local_mean_equalized(img, params)
     z_eq = local_zscore_equalized(img, params)
     ret = multi_scale_retinex_like(img, params)
-    corrected = 0.45 * mean_eq + 0.35 * z_eq + 0.20 * ret
+    corrected = params.w_mean * mean_eq + params.w_zscore * z_eq + params.w_retinex * ret
     corrected = smooth_profile_correction(corrected, params, correct_rows=True, correct_cols=True)
     return mean_std_match(corrected, img)
 
