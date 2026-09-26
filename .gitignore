@@ -1,0 +1,46 @@
+# Environments, caches and local agent state
+.venv*/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.agents/
+.codex/
+.claude/
+.env
+.env.*
+!.env.example
+/tmp/
+# Local datasets and generated results
+*Dataset*/
+solder_ball_data*/
+TRI_New_Image/
+G2G3/
+result/
+results/
+checkpoints/
+numeric/
+# Images, weights, archives and presentation artifacts
+*.[jJ][pP][gG]
+*.[jJ][pP][eE][gG]
+*.[pP][nN][gG]
+*.[bB][mM][pP]
+*.[tT][iI][fF]
+*.[tT][iI][fF][fF]
+*.gif
+*.webp
+*.npz
+*.npy
+*.pth
+*.pt
+*.onnx
+*.zip
+*.7z
+*.rar
+*.tar
+*.gz
+*.pptx
+*.pptx.*
+*.pdf
+# Generated review state (documentation remains trackable)
+competitor_target_pipeline/review/*.json

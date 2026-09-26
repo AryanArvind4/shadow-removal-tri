@@ -1,0 +1,9 @@
+{
+  "pipeline": "v5a",
+  "note": "Selected V5a processing source only; no image data or local paths.",
+  "source_hashes": {
+    "competitor_target_v5a.py": "019c9c29465800dcdc2deff6670d0ef8d0356183f6a97771b8d035eee31ad295",
+    "automatic_v5.py": "ac56e2105446868d31adbf5d771d2aaaffdc03ff833e6ddec4bac9cd7f7c3763",
+    "competitor_target_v3.py": "939e99dc9476392a7514c368dc60a0bf62e951338be703923e68029806a6c84d"
+  }
+}

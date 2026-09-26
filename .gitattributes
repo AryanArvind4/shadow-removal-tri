@@ -1,0 +1,3 @@
+# Preserve selected V5a source hashes across Windows/Linux clones.
+competitor_target_pipeline/*.py text eol=lf
+competitor_target_pipeline/*.json text eol=lf
