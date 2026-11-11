@@ -42,5 +42,12 @@ numeric/
 *.pptx
 *.pptx.*
 *.pdf
+# Meeting decks, their build files and presentation-only notes
+/presentations/
+/GEMINI_V5A_PRESENTATION_PROMPT.md
+/V5A_FINAL_PRESENTATION_STUDY_NOTES.md
+# Local previews and unrelated generated output
+/output/
+/u29_focused_pipeline/shape_preview/
 # Generated review state (documentation remains trackable)
 competitor_target_pipeline/review/*.json

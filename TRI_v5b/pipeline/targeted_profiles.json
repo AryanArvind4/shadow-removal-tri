@@ -1,0 +1,35 @@
+{
+  "description": "Analyst-selected component search envelopes for three exact images. Coordinates are native x0,y0,x1,y1, exclusive upper bounds. These are not defect annotations or a general detector.",
+  "profiles": [
+    {
+      "dataset": "TRI_1008",
+      "filename": "Component_U76_1_2048_708_636_201_z201.bmp",
+      "sha256": "904de733c76528b81c06d95f1f8a271ce6e9fb68e647f2282958c9037881a552",
+      "mode": "restrict_existing",
+      "size": [708, 636],
+      "feather": 4.0,
+      "boxes": [[40,38,252,91],[435,40,653,93],[32,207,77,317],[33,319,77,423],[103,189,260,558],[281,263,333,374],[348,270,395,390],[350,204,410,285],[412,188,590,558],[612,207,663,323],[612,326,663,430]],
+      "unchanged_check_boxes": [[0,565,708,636],[260,95,420,200],[30,435,98,560],[610,440,675,565]]
+    },
+    {
+      "dataset": "TRI_new",
+      "filename": "image001.png",
+      "sha256": "83064a7cb5642fa7578561db2587d003005f4192454c7848771a25bc9cea0421",
+      "mode": "complete_screenshot_components",
+      "size": [373,282],
+      "feather": 1.6,
+      "grid": {"x": [32,74,117,160,204,247,291,335], "y": [20,51,83,115,146,178,210,242,270], "half_width": 17, "half_height": 12},
+      "boxes": []
+    },
+    {
+      "dataset": "TRI_new",
+      "filename": "image002.png",
+      "sha256": "f7deeae738d6f12df420cf08a366190230ec9eb3b7d214e22698be5ed68317e8",
+      "mode": "complete_screenshot_components",
+      "size": [405,320],
+      "feather": 3.5,
+      "retain_previous_outside_boxes": true,
+      "boxes": [[36,24,133,186],[148,24,254,186],[35,246,134,320],[149,246,255,320]]
+    }
+  ]
+}

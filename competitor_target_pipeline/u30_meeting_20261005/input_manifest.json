@@ -1,0 +1,68 @@
+{
+  "status": "baseline_complete",
+  "source": "E:\\Shadow_Removal_SDE\\TRI_Dataset-20260511T190518Z-3-001\\TRI_Dataset",
+  "images": [
+    {
+      "filename": "U30_032.jpg",
+      "sha256": "4e783f6287e9cca7d654ba7d22de087f5ec1f528763f8ab393d0a849ddd833c1",
+      "dimensions": [
+        768,
+        700
+      ]
+    },
+    {
+      "filename": "U30_033.jpg",
+      "sha256": "01dd52bef88ea7704f5b8cc5edd7d841f3e949f7e8be52dd1c12d3c990cf81bd",
+      "dimensions": [
+        768,
+        700
+      ]
+    },
+    {
+      "filename": "U30_034.jpg",
+      "sha256": "a8eabfe5d474b580e7bb11a3f60810ac095c888124bd7a948d0da59ba39f2b45",
+      "dimensions": [
+        768,
+        700
+      ]
+    },
+    {
+      "filename": "U30_035.jpg",
+      "sha256": "533e4c6add606fb0fb6d0c06d23174a973446850284ca67f2a566ed91a91ee53",
+      "dimensions": [
+        768,
+        700
+      ]
+    },
+    {
+      "filename": "U30_073.jpg",
+      "sha256": "b61b0e1646e3608ea0494da7ca81d5164d339222a677c08893ff9cd0893b44db",
+      "dimensions": [
+        768,
+        700
+      ]
+    },
+    {
+      "filename": "U30_074.jpg",
+      "sha256": "c0b7bc9205f56e63a4e7cb808800bc31036fe724565d9d133b7b5729c8f1a429",
+      "dimensions": [
+        768,
+        700
+      ]
+    },
+    {
+      "filename": "U30_075.jpg",
+      "sha256": "eab195c36492e8c0b51e8d39e0f73e3d633887734d5024468cbdceb2f571577f",
+      "dimensions": [
+        768,
+        700
+      ]
+    }
+  ],
+  "baseline_source_hashes": {
+    "competitor_target_v5a.py": "019c9c29465800dcdc2deff6670d0ef8d0356183f6a97771b8d035eee31ad295",
+    "automatic_v5.py": "ac56e2105446868d31adbf5d771d2aaaffdc03ff833e6ddec4bac9cd7f7c3763",
+    "competitor_target_v3.py": "939e99dc9476392a7514c368dc60a0bf62e951338be703923e68029806a6c84d"
+  },
+  "baseline_seconds": 42.47326749982312
+}

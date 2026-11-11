@@ -1,10 +1,12 @@
 # TRI PCB X-ray Inspection-View Pipeline
 
 Classical image processing for shadow correction and grayscale inspection of PCB
-X-ray images. **V5a is the selected inspection-view pipeline** used for the latest
-progress report and new TRI image batches. It is not a trained neural network or
-an automatic defect classifier. The original classical shadow-removal code is
-retained as an earlier baseline.
+X-ray images. **V5a is the retained inspection-view baseline; V5b adds component
+selection and original-background compositing.** Three reviewed images also have
+explicitly image-specific corrections, separate from automatic V5b. These are
+classical enhancement pipelines, not trained neural networks or automatic defect
+classifiers. Earlier classical and learning-based experiments remain available
+as research history.
 
 ## Setup
 
@@ -51,6 +53,42 @@ For another batch, change `--input` and `--output`. Filenames do not select a
 component-specific processing mode. `run_tri_new_images.py` is a separate,
 dataset-specific adapter for `TRI_New_Image/image001.png` and `image002.png`; it
 converts those RGB screenshots to grayscale without removing their overlays.
+
+## V5b Component Enhancement
+
+[V5b documentation](TRI_v5b/README.md) describes the current component-focused
+extension. It runs a byte-identical frozen copy of V5a, estimates component
+supports from the input, and blends the enhancement inside their edges. Pixels
+outside the **estimated** supports retain their original values. Boundary handling
+reduces additional darkening introduced by enhancement, rather than erasing dark
+rims already present in the input. Incorrect selections and faint-detail changes
+remain possible.
+
+The local study runner uses `TRI_v5b/study_manifest.json` and its hash-verified
+inputs. That manifest, images and results are intentionally excluded from Git.
+The following command therefore requires the existing local study, not only a
+fresh clone:
+
+```powershell
+.\.venv312\Scripts\python.exe TRI_v5b\pipeline\run_v5b.py --output TRI_v5b\results_new
+```
+
+Do not rerun `prepare_study.py` merely to test a fresh clone: it performs the
+original dataset preparation and folder moves. The processing implementation is
+`TRI_v5b/pipeline/v5b.py`; its synthetic tests do not need the private study data:
+
+```powershell
+.\.venv312\Scripts\python.exe -m unittest discover -s TRI_v5b\pipeline -p "test_*.py" -v
+```
+
+V5b exports `enhanced/` for native-mode final images, `input_output/` for paired
+comparisons, and `comparison_sheets/` for input/V5a/V5b comparisons. Selection
+overlays and masks support review, but are not ground-truth component labels.
+
+[Targeted corrections](TRI_v5b/TARGETED_FIXES.md) cover U76 z201 and the two
+TRI_New_Image screenshots. Their manually specified search windows are locked to
+exact input hashes. They require prior local V5b outputs and must not be presented
+as a general automatic improvement. The original V5a/V5b outputs remain intact.
 
 ## How V5a Works
 
@@ -125,6 +163,18 @@ pixel equality with its outputs. It requires the original images and
 
 ## Repository Guide
 
+- [V5b component-focused pipeline](TRI_v5b/README.md) and
+  [image-specific corrections](TRI_v5b/TARGETED_FIXES.md).
+- [Living thesis draft and research roadmap](thesis/README.md): preliminary
+  evidence, limitations, evaluation plans and literature notes. Linked result
+  images and local audit inputs are not included in a fresh clone.
+- [U30 focused study](competitor_target_pipeline/u30_meeting_20261005/README.md)
+  and [U29 experiments](u29_focused_pipeline/README.md): exploratory methods,
+  including rejected approaches, not replacements for the selected baseline.
+- [Component restoration](component_restoration/README.md),
+  [masked background studies](masked_background_research/README.md), and
+  [inspection-view experiments](inspection_view_pipeline/README.md): earlier
+  research branches.
 - [V5a and earlier pipeline details](competitor_target_pipeline/README.md)
 - `competitor_target_pipeline/competitor_target_v5a.py`: selected V5a entry point.
 - `competitor_target_pipeline/automatic_v5.py`: automatic baseline processing.
@@ -135,3 +185,11 @@ pixel equality with its outputs. It requires the original images and
   `review_workbench.py`: optional human-reviewed evaluation tools.
 - `classical_shadow_removal_v2.py`: earlier classical shadow-removal pipeline.
 - `results/classical_v2/metrics.csv`: historical classical metrics, not V5a scores.
+
+The root `stage1_*`, `stage2_inference.py`, `stage3_evaluate.py`,
+`decomposition_model_v3.py` and `run_pipeline.py` contain earlier learning-based
+experiments. They have additional dependencies beyond the current classical
+pipeline requirements, and their datasets/checkpoints are not uploaded.
+`test_hybrid_postprocess.py` is a historical batch script with import-time file
+writes, not a unit-test module. Use the explicitly scoped test commands above
+instead of importing it or running unrestricted repository-wide test discovery.

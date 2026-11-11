@@ -1,0 +1,38 @@
+test_native_shape_and_finite_constant (test_competitor_target_v3.RestorationTests.test_native_shape_and_finite_constant) ... ok
+test_region_correction_preserves_small_void_depth (test_competitor_target_v3.RestorationTests.test_region_correction_preserves_small_void_depth) ... ok
+test_reviewed_metrics_keep_contrast_polarity (test_competitor_target_v3.RestorationTests.test_reviewed_metrics_keep_contrast_polarity) ... ok
+test_reviewed_polygons_validate_bounds_and_overlap (test_competitor_target_v3.RestorationTests.test_reviewed_polygons_validate_bounds_and_overlap) ... ok
+test_rows_disabled_for_u_components (test_competitor_target_v3.RestorationTests.test_rows_disabled_for_u_components) ... ok
+test_separate_pad_statistics (test_competitor_target_v3.RestorationTests.test_separate_pad_statistics) ... ok
+test_tone_preserves_order_and_headroom (test_competitor_target_v3.RestorationTests.test_tone_preserves_order_and_headroom) ... ok
+test_unknown_structure_is_not_replaced_by_mask (test_competitor_target_v3.RestorationTests.test_unknown_structure_is_not_replaced_by_mask) ... ok
+test_background_noise_falls_without_changing_solder_pixels (test_competitor_target_v4.ComponentCleanupTests.test_background_noise_falls_without_changing_solder_pixels) ... ok
+test_background_only_band_estimation_and_component_gate (test_competitor_target_v4.ComponentCleanupTests.test_background_only_band_estimation_and_component_gate) ... ok
+test_constant_input_is_finite_and_native_resolution (test_competitor_target_v4.ComponentCleanupTests.test_constant_input_is_finite_and_native_resolution) ... ok
+test_grid_requires_image_evidence_and_manifest_serializes (test_competitor_target_v4.ComponentCleanupTests.test_grid_requires_image_evidence_and_manifest_serializes) ... ok
+test_adaptive_gain_is_bounded (test_competitor_target_v5.ReviewAndVisibilityTests.test_adaptive_gain_is_bounded) ... ok
+test_annotations_require_review_provenance (test_competitor_target_v5.ReviewAndVisibilityTests.test_annotations_require_review_provenance) ... ok
+test_gain_skips_u30_and_requires_evidence (test_competitor_target_v5.ReviewAndVisibilityTests.test_gain_skips_u30_and_requires_evidence) ... ok
+test_square_refinement_requires_outer_edge_support (test_competitor_target_v5.ReviewAndVisibilityTests.test_square_refinement_requires_outer_edge_support) ... ok
+test_u29_constant_shift_preserves_void_and_interior_spread (test_competitor_target_v5.ReviewAndVisibilityTests.test_u29_constant_shift_preserves_void_and_interior_spread) ... ok
+test_u30_stays_on_v4_processing (test_competitor_target_v5.ReviewAndVisibilityTests.test_u30_stays_on_v4_processing) ... ok
+test_bands_require_evidence (test_competitor_target_v5_auto.AutomaticTests.test_bands_require_evidence) ... ok
+test_component_name_does_not_change_processing (test_competitor_target_v5_auto.AutomaticTests.test_component_name_does_not_change_processing) ... ok
+test_constant_image_not_turned_into_structure (test_competitor_target_v5_auto.AutomaticTests.test_constant_image_not_turned_into_structure) ... ok
+test_denoise_reduces_flat_noise_and_limits_large_changes (test_competitor_target_v5_auto.AutomaticTests.test_denoise_reduces_flat_noise_and_limits_large_changes) ... ok
+test_finite_native_resolution_and_bounds (test_competitor_target_v5_auto.AutomaticTests.test_finite_native_resolution_and_bounds) ... ok
+test_rejects_invalid_input (test_competitor_target_v5_auto.AutomaticTests.test_rejects_invalid_input) ... ok
+test_synthetic_dark_feature_remains_dark (test_competitor_target_v5_auto.AutomaticTests.test_synthetic_dark_feature_remains_dark) ... ok
+test_tone_is_increasing (test_competitor_target_v5_auto.AutomaticTests.test_tone_is_increasing) ... ok
+test_detects_repeated_grid_without_fixed_count (test_competitor_target_v5a.SelectivePadTests.test_detects_repeated_grid_without_fixed_count) ... ok
+test_filename_independence_and_fallback (test_competitor_target_v5a.SelectivePadTests.test_filename_independence_and_fallback) ... ok
+test_no_grid_on_blank_or_line_only_image (test_competitor_target_v5a.SelectivePadTests.test_no_grid_on_blank_or_line_only_image) ... ok
+test_repeated_dots_only_and_pad_guard (test_competitor_target_v5a.SelectivePadTests.test_repeated_dots_only_and_pad_guard) ... ok
+test_small_dark_feature_is_not_filled (test_competitor_target_v5a.SelectivePadTests.test_small_dark_feature_is_not_filled) ... ok
+test_bmp_batch_without_historical_results (test_competitor_target_v5a_batch.BatchPackagingTests.test_bmp_batch_without_historical_results) ... ok
+test_selected_source_hashes (test_competitor_target_v5a_batch.BatchPackagingTests.test_selected_source_hashes) ... ok
+
+----------------------------------------------------------------------
+Ran 33 tests in 2.620s
+
+OK

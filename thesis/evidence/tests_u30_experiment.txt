@@ -1,0 +1,10 @@
+test_bounded_finite_fields_and_unchanged_input (test_focused.FocusTests.test_bounded_finite_fields_and_unchanged_input) ... ok
+test_constant_input_not_fabricated (test_focused.FocusTests.test_constant_input_not_fabricated) ... ok
+test_invalid_data_and_settings_rejected (test_focused.FocusTests.test_invalid_data_and_settings_rejected) ... ok
+test_no_adjustment_when_disabled (test_focused.FocusTests.test_no_adjustment_when_disabled) ... ok
+test_signed_features_at_several_sizes (test_focused.FocusTests.test_signed_features_at_several_sizes) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.050s
+
+OK

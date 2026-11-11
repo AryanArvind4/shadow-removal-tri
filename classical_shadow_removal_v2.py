@@ -491,6 +491,7 @@ def smooth_profile_correction(
         out *= global_mean / np.maximum(col_profile[None, :], 1.0)
 
     return robust_rescale_to_input(out, img, params.contrast_percentiles)
+    
 
 
 def detect_vertical_seam(img: np.ndarray) -> Optional[int]:

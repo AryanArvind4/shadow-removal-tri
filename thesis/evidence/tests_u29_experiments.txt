@@ -1,0 +1,43 @@
+
+  pad edge gradient 161 without deblur, 198 with (+23%)
+
+  edge shift px: median 0.253  p95 1.098  max 10.743  (measured 1227 of 2304 edges, 47% not resolvable)
+  void contrast single 98, plane average 100
+
+  solder plane frames 30..36, peak 33
+
+  mark contrast ratio out/src: min 0.98 median 1.66 (n=213)
+test_conservative_disables_detail_operations (test_clarity_audit.TestAudit.test_conservative_disables_detail_operations) ... ok
+test_tone_is_nondecreasing_and_spatially_independent (test_clarity_audit.TestAudit.test_tone_is_nondecreasing_and_spatially_independent) ... ok
+test_zero_denoising_preserves_float_source (test_clarity_audit.TestAudit.test_zero_denoising_preserves_float_source) ... ok
+test_deconvolution_adds_no_halo (test_u29_clarity.TestGeometry.test_deconvolution_adds_no_halo)
+Deblurring must sharpen without ringing a bright rim into the gap. ... ok
+test_deconvolution_sharpens_pad_edges (test_u29_clarity.TestGeometry.test_deconvolution_sharpens_pad_edges)
+The deblur stage must actually earn its place. ... ok
+test_grid_is_eight_by_nine_on_every_input (test_u29_clarity.TestGeometry.test_grid_is_eight_by_nine_on_every_input) ... ok
+test_guard_gain_is_unity_over_every_pad (test_u29_clarity.TestGeometry.test_guard_gain_is_unity_over_every_pad)
+Background attenuation must never reach inside a pad. ... ok
+test_pad_edges_do_not_move (test_u29_clarity.TestGeometry.test_pad_edges_do_not_move)
+Half-height edge crossings must agree with the source. ... ok
+test_void_boost_weight_clears_the_pad_edge (test_u29_clarity.TestGeometry.test_void_boost_weight_clears_the_pad_edge)
+The band pass must not be applied across the pad boundary. ... ok
+test_averaging_the_plane_does_not_lose_void_contrast (test_u29_clarity.TestHeightStack.test_averaging_the_plane_does_not_lose_void_contrast) ... ok
+test_solder_plane_lands_on_the_ball_layer (test_u29_clarity.TestHeightStack.test_solder_plane_lands_on_the_ball_layer)
+Focus selection must pick the solder plane, not the die or board. ... ok
+test_stack_is_complete (test_u29_clarity.TestHeightStack.test_stack_is_complete) ... ok
+test_background_is_flatter_than_source (test_u29_clarity.TestPhotometry.test_background_is_flatter_than_source) ... ok
+test_source_dark_marks_gain_contrast (test_u29_clarity.TestPhotometry.test_source_dark_marks_gain_contrast)
+Voids visible in the source must be at least as visible after. ... ok
+test_tone_curve_is_monotone (test_u29_clarity.TestPhotometry.test_tone_curve_is_monotone) ... ok
+test_field_has_no_jump_at_rectangle_boundary (test_u29_focused.ShapeCorrectionTests.test_field_has_no_jump_at_rectangle_boundary) ... ok
+test_global_curve_is_strictly_monotone_and_linear_in_working_range (test_u29_focused.ShapeCorrectionTests.test_global_curve_is_strictly_monotone_and_linear_in_working_range) ... ok
+test_invalid_and_blank_sources_do_not_make_pads (test_u29_focused.ShapeCorrectionTests.test_invalid_and_blank_sources_do_not_make_pads) ... ok
+test_no_filtering_or_dot_suppression_at_pad_edges (test_u29_focused.ShapeCorrectionTests.test_no_filtering_or_dot_suppression_at_pad_edges) ... ok
+test_no_supported_grid_rejects_output (test_u29_focused.ShapeCorrectionTests.test_no_supported_grid_rejects_output) ... ok
+test_rounded_edges_stay_in_place (test_u29_focused.ShapeCorrectionTests.test_rounded_edges_stay_in_place) ... ok
+test_small_and_large_marks_recover_from_photometric_transform (test_u29_focused.ShapeCorrectionTests.test_small_and_large_marks_recover_from_photometric_transform) ... ok
+
+----------------------------------------------------------------------
+Ran 22 tests in 31.816s
+
+OK

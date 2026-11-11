@@ -1,0 +1,18 @@
+test_component_mask_encloses_dark_hole_without_filling_image (test_targeted_fixes.TargetedFixTests.test_component_mask_encloses_dark_hole_without_filling_image) ... ok
+test_excluded_artifacts_revert_to_source_and_accepted_core_stays (test_targeted_fixes.TargetedFixTests.test_excluded_artifacts_revert_to_source_and_accepted_core_stays) ... ok
+test_retained_rgb_regions_and_annotations_are_exact (test_targeted_fixes.TargetedFixTests.test_retained_rgb_regions_and_annotations_are_exact) ... ok
+test_wrong_dimensions_are_rejected (test_targeted_fixes.TargetedFixTests.test_wrong_dimensions_are_rejected) ... ok
+test_wrong_source_hash_is_rejected (test_targeted_fixes.TargetedFixTests.test_wrong_source_hash_is_rejected) ... ok
+test_background_exact_and_interior_retains_dark_feature (test_v5b.ComponentCompositingTests.test_background_exact_and_interior_retains_dark_feature) ... ok
+test_boundary_avoids_added_darkening_but_preserves_source_rim (test_v5b.ComponentCompositingTests.test_boundary_avoids_added_darkening_but_preserves_source_rim) ... ok
+test_constant_image_stays_constant_end_to_end (test_v5b.ComponentCompositingTests.test_constant_image_stays_constant_end_to_end) ... ok
+test_grid_support_keeps_center_void_and_tracks_translated_pad (test_v5b.ComponentCompositingTests.test_grid_support_keeps_center_void_and_tracks_translated_pad) ... ok
+test_invalid_input_rejected (test_v5b.ComponentCompositingTests.test_invalid_input_rejected) ... ok
+test_no_support_returns_source (test_v5b.ComponentCompositingTests.test_no_support_returns_source) ... ok
+test_rgb_background_and_protected_annotation_unchanged (test_v5b.ComponentCompositingTests.test_rgb_background_and_protected_annotation_unchanged) ... ok
+test_round_support_includes_internal_cavity_without_filling_pixels (test_v5b.ComponentCompositingTests.test_round_support_includes_internal_cavity_without_filling_pixels) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 0.050s
+
+OK

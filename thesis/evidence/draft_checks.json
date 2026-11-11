@@ -1,0 +1,173 @@
+{
+  "status": "pass",
+  "local_links_checked": 44,
+  "figure_count": 6,
+  "figures": [
+    {
+      "document": "THESIS_DRAFT.md",
+      "path": "competitor_target_pipeline/result/competitor_target_v5a/input_output/J1_007.png",
+      "sha256": "720a238bd43f20792814574128b1e43746c616eae72a937d6a42f7884b777b7d"
+    },
+    {
+      "document": "THESIS_DRAFT.md",
+      "path": "competitor_target_pipeline/result/competitor_target_v5a/input_output/J4_048.png",
+      "sha256": "778de5b2eade78c5eebaf658f72a05f792ac87bf63badb0fdf244b3a850f348a"
+    },
+    {
+      "document": "THESIS_DRAFT.md",
+      "path": "competitor_target_pipeline/result/competitor_target_v5a/input_output/U29_034.png",
+      "sha256": "76984eea2f396943159b2b6420e5691ee01ec8024a008a41f643bbacfde5c1d8"
+    },
+    {
+      "document": "THESIS_DRAFT.md",
+      "path": "competitor_target_pipeline/result/competitor_target_v5a/input_output/U30_085.png",
+      "sha256": "728c23b2813339021915d5c4383f2d47cb2f15134b28a9bab5f30f48a327c972"
+    },
+    {
+      "document": "THESIS_DRAFT.md",
+      "path": "TRI_v5b/results/U29/comparison_sheets/U29_034.png",
+      "sha256": "129ad63bc8bfee8dade1cae58ac17c22f923c8a62279354071ff6c8668cd59b7"
+    },
+    {
+      "document": "THESIS_DRAFT.md",
+      "path": "TRI_v5b/results_targeted/TRI_1008/comparison_sheets/Component_U76_1_2048_708_636_201_z201.png",
+      "sha256": "57f5824e62bfa2b602084fd16327ac25fe89e2a8c21ba4ac47c7a4bf0fd4603d"
+    }
+  ],
+  "document_words": {
+    "CHANGELOG.md": 267,
+    "EVALUATION_PLAN.md": 1544,
+    "EVIDENCE_REGISTER.md": 661,
+    "EXPERIMENT_TEMPLATE.md": 272,
+    "README.md": 502,
+    "REFERENCES.md": 532,
+    "REPOSITORY_REVIEW.md": 1731,
+    "THESIS_DRAFT.md": 4826
+  },
+  "saved_v5b_checks": [
+    {
+      "dataset": "U29",
+      "filename": "U29_029.jpg",
+      "original_sha256": "fcc4f339ce4d030608bf198949099eb48aac979bc8a0e5b9c3abf92b0ece7e2a",
+      "output_sha256": "3be837c3ac4501888725a0318c503c2bddbc8fbb85ff73d4ead673aeadfc5e31",
+      "source_shape_and_background_exact": true,
+      "core_equals_v5a": true
+    },
+    {
+      "dataset": "U29",
+      "filename": "U29_030.jpg",
+      "original_sha256": "553c3a4855196e6d30df975a3f6ef25cec951b1003fbecf8738ee8a6b0cce4c1",
+      "output_sha256": "b6c799510045d0be53c32683a461550cdd371d875ce04c7aed95f0ee308d56f5",
+      "source_shape_and_background_exact": true,
+      "core_equals_v5a": true
+    },
+    {
+      "dataset": "U29",
+      "filename": "U29_031.jpg",
+      "original_sha256": "82b803a89dc62c2c3095acf76a46e29f2178139bd6c92cff894d00ef711b06b8",
+      "output_sha256": "f7317d0dda76b4ac9d516dce0faa4d75a46b88d48f2e84b5b4245a979e0af946",
+      "source_shape_and_background_exact": true,
+      "core_equals_v5a": true
+    },
+    {
+      "dataset": "U29",
+      "filename": "U29_032.jpg",
+      "original_sha256": "eaa1ea58cf706e45c3644eed7d697ab86886fc7fe6d7ec82c7520bc1a13ccd9f",
+      "output_sha256": "8bd05a7588e5bc8b8ec664a50402a2bcc7d8ee8951b11f887696d79824eb1816",
+      "source_shape_and_background_exact": true,
+      "core_equals_v5a": true
+    },
+    {
+      "dataset": "U29",
+      "filename": "U29_033.jpg",
+      "original_sha256": "822a7a48a06df737a18f4418e6dac1d45357f3fcc7e5edac70d3c160c08a9dcd",
+      "output_sha256": "9be4e6bbf4d79f7638771813f91b39d22654646b84fc239c09932e3d7c1c20cb",
+      "source_shape_and_background_exact": true,
+      "core_equals_v5a": true
+    },
+    {
+      "dataset": "U29",
+      "filename": "U29_034.jpg",
+      "original_sha256": "5133cc2a515cb5e429dff24eee47b569beb356db58b1fb5ec194fee21372d003",
+      "output_sha256": "516d70a90d14c604f0fb28cd2b61fd09743b6cb2337f4143b85b9769b2720707",
+      "source_shape_and_background_exact": true,
+      "core_equals_v5a": true
+    },
+    {
+      "dataset": "U29",
+      "filename": "U29_035.jpg",
+      "original_sha256": "beb7e844d29b54beca6836880f7c13c4f0133fb1f486478007a8118d087ba487",
+      "output_sha256": "c8457a58626c56a99437ce0a4084f025fcdbbcbb1b62c8a3ba0f6f0a78fd8bcb",
+      "source_shape_and_background_exact": true,
+      "core_equals_v5a": true
+    },
+    {
+      "dataset": "U29",
+      "filename": "U29_036.jpg",
+      "original_sha256": "dc9ce0debf3496833b2c67492cc475525a85ba746c6db3afe507da3069becfab",
+      "output_sha256": "84c029c766f6183fc7eb145bfb38314094ed41f2deb3b9b9246459a5e772378f",
+      "source_shape_and_background_exact": true,
+      "core_equals_v5a": true
+    },
+    {
+      "dataset": "TRI_1008",
+      "filename": "Component_U76_1_2048_708_636_201_z1.bmp",
+      "original_sha256": "32e5f52614664451259e27b1cf30f5ff3946f8e5713f715116d35f4575bb3a0e",
+      "output_sha256": "d57e622ffc95315712dcba5f2b1358a64ba464296deee671891c4fb5d6ad50ec",
+      "source_shape_and_background_exact": true,
+      "core_equals_v5a": true
+    },
+    {
+      "dataset": "TRI_1008",
+      "filename": "Component_U76_1_2048_708_636_201_z141.bmp",
+      "original_sha256": "171f995974eaa652a475756877a008915d74038b6c789513f05c41e0dab5537a",
+      "output_sha256": "5f9d03a650448ac604134289783f62817226fe42fffedab94339305921141e7d",
+      "source_shape_and_background_exact": true,
+      "core_equals_v5a": true
+    },
+    {
+      "dataset": "TRI_1008",
+      "filename": "Component_U76_1_2048_708_636_201_z201.bmp",
+      "original_sha256": "904de733c76528b81c06d95f1f8a271ce6e9fb68e647f2282958c9037881a552",
+      "output_sha256": "551b6fd90a808799a666fe8a7c03579bb9f918d026962282f0e4d7002c63390d",
+      "source_shape_and_background_exact": true,
+      "core_equals_v5a": true
+    },
+    {
+      "dataset": "TRI_new",
+      "filename": "image001.png",
+      "original_sha256": "83064a7cb5642fa7578561db2587d003005f4192454c7848771a25bc9cea0421",
+      "output_sha256": "4e630a1423d916eed6a510c5df0fb7c417fdccf4b9caab67486f591745281ad0",
+      "source_shape_and_background_exact": true,
+      "core_equals_v5a": true
+    },
+    {
+      "dataset": "TRI_new",
+      "filename": "image002.png",
+      "original_sha256": "f7deeae738d6f12df420cf08a366190230ec9eb3b7d214e22698be5ed68317e8",
+      "output_sha256": "55418defd704c2a5a995eb7a1e0c3ebac13c5b4c1189065996b904b61063010e",
+      "source_shape_and_background_exact": true,
+      "core_equals_v5a": true
+    },
+    {
+      "dataset": "round_ball_review",
+      "filename": "Component_G2_1_1152_2472_2140_165_z0060.bmp",
+      "original_sha256": "4c87befa3561140f788cf6dbac39e83c1a543906ac044e6602215c5d80beac9a",
+      "output_sha256": "ad958d18810655e05243df895c1fae5d096eb4817f85264970bde4af9ac4b1d6",
+      "source_shape_and_background_exact": true,
+      "core_equals_v5a": true
+    }
+  ],
+  "source_hash_checks": {
+    "competitor_target_pipeline/competitor_target_v5a.py": true,
+    "TRI_v5b/pipeline/frozen_v5a/competitor_target_v5a.py": true,
+    "competitor_target_pipeline/automatic_v5.py": true,
+    "TRI_v5b/pipeline/frozen_v5a/automatic_v5.py": true,
+    "competitor_target_pipeline/competitor_target_v3.py": true,
+    "TRI_v5b/pipeline/frozen_v5a/competitor_target_v3.py": true,
+    "TRI_v5b/pipeline/run_v5b.py": true,
+    "TRI_v5b/pipeline/v5b.py": true
+  },
+  "recorded_test_count": 73,
+  "limitations": "No human defect validation or true-background labeling. Local-link checks do not verify external URLs."
+}
