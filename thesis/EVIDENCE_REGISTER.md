@@ -1,6 +1,6 @@
 # Evidence and Claim Register
 
-Snapshot: 2026-10-22. Relative paths resolve from this folder. Evidence levels:
+Updated: 2026-11-24; October audit evidence retains its original date. Relative paths resolve from this folder. Evidence levels:
 **implementation**, **saved measurement**, **qualitative observation**,
 **user-reported feedback**, **hypothesis**, **planned evaluation**.
 
@@ -22,7 +22,18 @@ Snapshot: 2026-10-22. Relative paths resolve from this folder. Evidence levels:
 | E14 | Professor feedback was positive, with requests for component-only enhancement | User-reported meeting feedback in project conversation; informal feedback, not a blinded observer study or formal industrial acceptance |
 | E15 | TRI supplies images and practical feedback in this collaboration | User/project records; exact institutional wording, contract scope, acknowledgments and publication rights require confirmation |
 
-## Claims not supported yet
+## November V5c Evidence
+
+| ID | Defensible statement | Evidence and limitation |
+| --- | --- | --- |
+| E16 | V5c uses source-contrast connectivity, bounded positive lifting and conservative non-grid acceptance | [Implementation](../TRI_v5c_2026-11-19/pipeline/v5c.py), [method documentation](../TRI_v5c_2026-11-19/README.md); no claim of semantic defect segmentation |
+| E17 | All 14 saved V5c outputs pass dimensions, outside-support equality and no-added-grayscale-darkening checks | [Fresh saved-file audit](evidence/v5c_checks.json), [checker](tools/check_v5c_evidence.py); source/baseline hashes verified without rerunning enhancement; masks are estimates |
+| E18 | Seventeen scoped synthetic V5c regression tests pass | [Test log](evidence/tests_v5c.txt), [tests](../TRI_v5c_2026-11-19/pipeline/test_v5c.py); not real-defect validation; separate from the 73 historical October tests |
+| E19 | Selected U29 rims appear clearer but some boundaries remain ambiguous | [Review](../TRI_v5c_2026-11-19/REVIEW_NOTES.md), Figures 6.7-6.8; qualitative observations on development data |
+| E20 | V5c has reduced coverage on some irregular plates, weak balls and TRI_new images | [Complete-cohort counts](evidence/v5c_checks.json), [review](../TRI_v5c_2026-11-19/REVIEW_NOTES.md); accepted/proposed counts are not precision or recall |
+| E21 | V5c export recorded 358.0 seconds and exact recomputed V5b agreement for 14 inputs | [Saved run](../TRI_v5c_2026-11-19/results_v5c/run.json); includes comparisons, crops and diagnostics; baseline equality recorded at export, not reprocessed by the November thesis audit |
+
+## Claims Not Supported Yet
 
 - "All defects are preserved" or "no structural change": requires reviewed
   real defects, full-boundary assessment and explicit sensitivity limits.

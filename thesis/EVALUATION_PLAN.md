@@ -162,3 +162,21 @@ a separately scoped study with its own forward model and evaluation.
 Agree on the title and evaluation endpoints with the professor, then review a
 small balanced pilot using the tools already present. This provides a stronger
 foundation for the next implementation than another round of visual tuning alone.
+
+## 10. November V5c Update
+
+Completed engineering work: a source-contrast boundary candidate, a complete
+14-image development export, 17 focused synthetic tests and saved-image invariant
+checks. These do not complete the planned human/task evaluation above.
+
+The next scoped comparison should include V5b, V5c, and separate targeted V5b
+where available. Review near-edge closed voids, genuine open notches and ambiguous
+features separately; never reward invented closure. Measure support errors against
+independent background/component labels, including missed weak balls and irregular
+plates. Ablate connectivity, continuous blending and stricter generic acceptance
+to distinguish their effects. Maintain matched native crops and full images.
+
+Await the user's latest professor feedback before choosing a new algorithm change.
+Formal reviewed evaluation remains planned; the exact protocol and independent
+acquisition groups should be agreed with TRI and the supervisor. Include V5c in
+the common-cohort runtime protocol instead of comparing its export total with V5a.

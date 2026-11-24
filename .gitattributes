@@ -4,3 +4,6 @@ competitor_target_pipeline/*.json text eol=lf
 # Keep the frozen snapshot byte-identical and V5b source hashes stable.
 TRI_v5b/**/*.py text eol=lf
 TRI_v5b/**/*.json text eol=lf
+TRI_v5c_2026-11-19/**/*.py text eol=lf
+TRI_v5c_2026-11-19/**/*.json text eol=lf
+TRI_v5c_2026-11-19/*.py text eol=lf

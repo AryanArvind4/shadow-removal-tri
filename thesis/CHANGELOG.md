@@ -1,5 +1,23 @@
 # Thesis Change Log
 
+## 2026-11-24 - Draft 0.2: V5c Boundary Study
+
+- Added source-contrast support, bounded positive source lifting and conservative
+  generic acceptance to the methodology; retained V5a/V5b descriptions unchanged.
+- Reported the complete 14-image development cohort, proposal counts, selected
+  U29 improvement and unresolved edge example, plus non-grid coverage regressions.
+- Kept automatic V5b and three manually targeted corrections distinct. V5c is a
+  review candidate, not a universal successor or confirmed defect-preserving method.
+- Added a read-only saved-result checker and 17-test scoped V5c log. Rechecked
+  hashes, dimensions, outside-support pixels and no added grayscale darkening.
+  Earlier 73-test logs and the October repository inventory remain historical.
+- Recorded 358.0 seconds as the saved full review-export time, not deployment
+  latency. Added evidence links and the next boundary/support evaluation priorities.
+- Added root AGENTS.md and PROJECT_HANDOFF.md for future chats/models. Pipeline
+  code and saved images were not changed by this documentation update.
+- Latest professor feedback is still pending; no additional algorithm change is
+  inferred. Industrial images and presentation files remain local, excluded from Git.
+
 ## 2026-10-22 - Draft 0.1 and repository evidence review
 
 - Created initial thesis framing, working manuscript, evidence register, evaluation

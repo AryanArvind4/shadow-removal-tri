@@ -1,0 +1,22 @@
+test_all_protected_is_identity (test_v5c.SourceGuidedTests.test_all_protected_is_identity) ... ok
+test_constant_end_to_end (test_v5c.SourceGuidedTests.test_constant_end_to_end) ... ok
+test_diagonal_open_channel_stays_dark (test_v5c.SourceGuidedTests.test_diagonal_open_channel_stays_dark) ... ok
+test_generic_circle_kept_diffuse_shape_rejected (test_v5c.SourceGuidedTests.test_generic_circle_kept_diffuse_shape_rejected) ... ok
+test_incomplete_background_ring_rejected (test_v5c.SourceGuidedTests.test_incomplete_background_ring_rejected) ... ok
+test_invalid_inputs_settings_and_mask (test_v5c.SourceGuidedTests.test_invalid_inputs_settings_and_mask) ... ok
+test_lower_brightness_anchor_does_not_darken (test_v5c.SourceGuidedTests.test_lower_brightness_anchor_does_not_darken) ... ok
+test_near_edge_void_keeps_source_rim (test_v5c.SourceGuidedTests.test_near_edge_void_keeps_source_rim) ... ok
+test_no_added_darkening_or_overflow (test_v5c.SourceGuidedTests.test_no_added_darkening_or_overflow) ... ok
+test_protected_rgb_pixels_remain_exact (test_v5c.SourceGuidedTests.test_protected_rgb_pixels_remain_exact) ... ok
+test_scalar_mapping_order_and_headroom (test_v5c.SourceGuidedTests.test_scalar_mapping_order_and_headroom) ... ok
+test_sloped_background_remains_unchanged (test_v5c.SourceGuidedTests.test_sloped_background_remains_unchanged) ... ok
+test_soft_near_edge_rim_retains_contrast (test_v5c.SourceGuidedTests.test_soft_near_edge_rim_retains_contrast) ... ok
+test_source_and_unselected_pixels_are_exact (test_v5c.SourceGuidedTests.test_source_and_unselected_pixels_are_exact) ... ok
+test_translation (test_v5c.SourceGuidedTests.test_translation) ... ok
+test_true_open_notch_is_not_closed (test_v5c.SourceGuidedTests.test_true_open_notch_is_not_closed) ... ok
+test_weak_background_rejected (test_v5c.SourceGuidedTests.test_weak_background_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 17 tests in 0.341s
+
+OK

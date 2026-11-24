@@ -10,6 +10,16 @@ as research history.
 
 ## Setup
 
+For a new chat or contributor, start with [project state and handoff](PROJECT_HANDOFF.md)
+and [repository working rules](AGENTS.md). The living thesis is now
+[draft 0.2](thesis/THESIS_DRAFT.md), updated 24 November 2026.
+
+The latest [V5c study](TRI_v5c_2026-11-19/README.md) investigates U29 boundary
+features using source-contrast support and bounded positive lifting. It is a
+review candidate, **not a blanket replacement for V5b**: some U29 crops improve,
+but weak balls and irregular plates can be missed. See the complete
+[review and limitations](TRI_v5c_2026-11-19/REVIEW_NOTES.md). V5a/V5b remain unchanged.
+
 Tested with Python 3.12 on Windows. Processing uses NumPy, SciPy, Pillow and
 OpenCV on the CPU; no NVIDIA GPU or model checkpoint is required.
 

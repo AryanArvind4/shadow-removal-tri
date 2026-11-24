@@ -1,5 +1,12 @@
 # Repository-to-Thesis Review
 
+**24 November 2026 addendum:** The original inventory and assessment below remain
+the October snapshot. Draft 0.2 adds the [V5c study](../TRI_v5c_2026-11-19/README.md)
+and [fresh saved-file evidence](evidence/v5c_checks.json). V5a/V5b remain baselines;
+V5c is a U29 boundary-review candidate with documented cross-component coverage
+regressions. The current [handoff](../PROJECT_HANDOFF.md) supersedes older root
+context notes for operational status. No new whole-repository inventory is claimed.
+
 Audit date: 2026-10-22. This document distinguishes inspected implementation,
 saved experimental evidence, user-reported feedback, and future work.
 

@@ -1,8 +1,8 @@
 # Component-Aware Enhancement of Industrial PCB X-ray Images for Visual Inspection
 
-## Working Master's Thesis - Draft 0.1
+## Working Master's Thesis - Draft 0.2
 
-Evidence snapshot: 2026-10-22
+Evidence update: 2026-11-24. Original repository audit: 2026-10-22.
 
 Author: [TO CONFIRM: full official name]
 
@@ -13,7 +13,8 @@ Supervisor: [TO CONFIRM: official name/title]
 Industrial collaboration: Test Research, Inc. (TRI), subject to confirmation of
 acknowledgment wording and permission to publish the included images.
 
-**Draft status.** This manuscript describes the current V5a/V5b implementations
+**Draft status.** This manuscript describes the retained V5a/V5b implementations
+and the experimental V5c boundary-support extension
 and available preliminary evidence. It is not a completed validation study.
 Bracketed items identify missing information. Proposed experiments are separated
 from completed work. The methods and result chapters are intended to evolve during
@@ -39,6 +40,15 @@ bounded regional correction. Unsupported layouts retain the automatic core resul
 The V5b extension estimates component supports and blends the V5a result into the
 source only within those supports, retaining original pixels outside them and
 reducing additional darkening near support boundaries.
+
+A subsequent V5c candidate replaces grid-support selection and edge blending with
+source-contrast connectivity and a bounded positive lift of original intensities.
+It addresses apparent merging of near-edge dark features with pad boundaries.
+On a 14-image development cohort, selected U29 crops show more visible source rims,
+while conservative non-grid selection reduces coverage of irregular plates and
+weak balls. V5c is therefore reported as a focused candidate, not a universal
+replacement for V5b. Synthetic tests and saved-file checks support narrow software
+properties; they do not establish true-void geometry or diagnostic improvement.
 
 Preliminary evidence includes a reproducible 32-image V5a development run across
 four component families and saved verification of outside-support source retention
@@ -405,6 +415,37 @@ These are assisted, image-specific repairs. They do not improve the automatic
 algorithm for arbitrary new images and are excluded from claims of generalization.
 They provide a useful diagnostic demonstration of the importance of support quality.
 
+### 4.6 V5c: Source-Supported Boundary Enhancement
+
+The November study investigates a specific V5b failure: an edge-adjacent dark
+feature may appear joined to the exterior when support selection or inward
+feathering excludes its thin surrounding rim. This is a hypothesis about display
+behavior, not a classification of every notch as a closed void.
+
+V5c retains frozen V5a/V5b for proposals and comparison. For grid candidates, a
+robust, slope-bounded plane fitted to a surrounding ring estimates local background.
+Strong positive source residuals seed a support; connected weaker residuals can
+retain faint rims. There is no morphological closing across dark gaps.
+Eight-connected background handling distinguishes enclosed support holes from
+open channels. Filling a mask hole does not replace the dark image pixels inside it.
+
+Within accepted regions, V5a supplies a brightness anchor, while a bounded positive
+lift is applied to source intensities. Pixels at or below estimated background,
+and pixels already above the white level, receive no lift. Continuous source-contrast
+weights and an outer proposal taper limit transitions. For fixed background, the
+scalar mapping is monotone; the final spatially varying composite is not guaranteed
+to preserve global intensity ordering. Native exports neither warp nor synthesize
+geometry. Apparent shapes can nevertheless change with intensity and must be reviewed.
+
+For non-grid proposals, sufficient surrounding context, solidity and occupancy
+are required before contrast validation. This more conservative acceptance can
+reduce false background enhancement but reject true weak or irregular components.
+Defaults are weak/strong contrast fractions 0.10/0.40, minimum contrast 3 levels,
+noise multiplier 2.5, maximum plane slope parameter 6 and white level 245.
+There are no per-filename profiles in V5c. The output explicitly equals the source
+outside effective support and adds no grayscale darkening. Neither invariant proves
+that semantic background is excluded or that all real defects retain visibility.
+
 ## Chapter 5. Evaluation Design and Available Evidence
 
 ### 5.1 Evidence Levels
@@ -442,7 +483,7 @@ will evaluate apparent deformation, with ambiguous-edge exclusions reported.
 ### 5.3 Comparison Protocol
 
 [PLANNED] Compare input, simple window/level contrast, CLAHE, a classical field
-correction, the automatic V5 core, V5a and V5b on the same images. Ablate denoising,
+correction, the automatic V5 core, V5a, V5b and V5c on the same images. Ablate denoising,
 gain, layout correction, dot attenuation and V5b boundary handling. Fix ROIs across
 methods and disclose whether tone parameters are held constant.
 
@@ -583,6 +624,52 @@ The October 22 audit passes 33 V3-V5a, 13 V5b, 22 U29-experiment and five U30-st
 tests. These 73 checks establish selected software properties, not industrial
 inspection accuracy. The evidence register identifies the saved logs and manifests.
 
+### 6.7 V5c Development Study and Boundary Trade-Off
+
+The November study reuses 14 previously reviewed inputs, not a new held-out set.
+All eight U29 images are U29_029 through U29_036. Results for the complete cohort
+are summarized below; proposal acceptance is not measured component accuracy.
+
+| Inputs | Count | Accepted / proposed regions per image | Interpretation |
+| --- | ---: | --- | --- |
+| U29_029-036 | 8 | 72 / 72 each | Selected boundary crops improve; ambiguous examples remain |
+| U76 z1 | 1 | 23 / 91 | Conservative selection omits many candidates |
+| U76 z141 | 1 | 69 / 69 | Grid branch; some internal detail is more conspicuous |
+| U76 z201 | 1 | 7 / 26 | Less lower-background alteration; irregular plates under-enhanced |
+| TRI_new image001 | 1 | 5 / 121 | Little change; retain separate targeted V5b result |
+| TRI_new image002 | 1 | 1 / 145 | Little change; retain separate targeted V5b result |
+| G2 round-ball case | 1 | 371 / 590 | Weak/irregular ball coverage regresses relative to V5b |
+
+![U29 boundary comparison](../TRI_v5c_2026-11-19/results_v5c/U29/pixel_crops/U29_032_pad_12.png)
+
+**Figure 6.7. U29_032, row 2, column 3: input / saved automatic V5b / V5c.**
+Each source pixel is replicated 5x, without smoothing. The lower-edge dark feature
+is more clearly separated from the outline in this inspected crop. This does not
+establish its physical classification or a measured defect-detection improvement.
+
+![Unresolved U29 boundary](../TRI_v5c_2026-11-19/results_v5c/U29/pixel_crops/U29_032_pad_14.png)
+
+**Figure 6.8. U29_032, row 2, column 5, at the same display convention.**
+The difficult feature remains ambiguous. V5c does not establish a closed rim where
+the input evidence is insufficient; reporting this case avoids claiming every
+apparent notch has been repaired. Full-image and all-pad comparisons are retained.
+
+In U76 z201, the inspected lower background remains closer to source than automatic
+V5b, but plate coverage is reduced. The earlier manually targeted V5b already
+addressed that background issue and is a distinct comparator. Round-ball and
+TRI_new examples likewise prevent a claim of universal improvement. The current
+recommendation is U29-focused review of V5c while retaining V5b alternatives.
+
+The saved export reports exact recomputed frozen-V5b agreement on all 14 inputs.
+The November 24 read-only recheck verifies input and retained-baseline snapshots,
+native dimensions, exact source pixels outside effective support, and no added
+grayscale darkening in all 14 saved outputs. Seventeen scoped synthetic V5c tests
+pass, including thin/blurred rims, open notches and diagonal dark channels. These
+are additional software checks, not real-defect sensitivity measurements. The
+October 73-test logs remain historical and are not represented as newly rerun.
+The complete recorded V5c review export took 358.0 seconds, including comparison
+sheets, crops and diagnostics; it is not an isolated processing benchmark.
+
 ## Chapter 7. Discussion
 
 ### 7.1 What the Current Results Support
@@ -647,6 +734,11 @@ system; V5b adds component-selective application with explicit source retention
 outside estimated supports. Preliminary results and verification provide a sound
 basis for drafting the thesis, while documented failures reveal the limits of
 contrast-based optimization and uncertain segmentation.
+
+V5c extends this investigation to source-supported boundary handling. It improves
+some inspected U29 edge presentations without establishing every void's geometry,
+and its conservative selection reduces coverage elsewhere. Its mixed results are
+part of the thesis evidence, not grounds to replace all retained V5b outputs.
 
 The next stage will prioritize dataset provenance, a small reviewed evaluation
 set, matched baselines and ablations, boundary/halo analysis, and independent

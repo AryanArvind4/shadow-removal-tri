@@ -1,6 +1,6 @@
 # Living Master's Thesis
 
-Working snapshot: 2026-10-22, draft 0.1. This is a research manuscript in progress,
+Working update: 2026-11-24, draft 0.2. This is a research manuscript in progress,
 not a submission-ready thesis or a claim that the research is finished.
 
 ## Recommended framing
@@ -15,6 +15,11 @@ V5a and automatic V5b are the current reference implementations. Their names are
 software versions, not the thesis's scientific contribution. Three image-specific
 V5b repairs are an explicitly separate case study. Future methods can replace the
 main results without requiring a new thesis structure.
+
+Draft 0.2 adds the V5c source-supported boundary candidate, the complete 14-image
+development cohort, selected U29 improvement and unresolved examples, and coverage
+regressions on other components. It does not promote V5c to a universal replacement.
+See [project handoff](../PROJECT_HANDOFF.md) for current state and artifact locations.
 
 ## Read in this order
 
@@ -33,6 +38,9 @@ It inventories 75 Python/Markdown files, source hashes and function locations,
 selected result manifests, dataset dimensions and decoded-image duplicates.
 It is an inventory and targeted technical review, not a claim that every image,
 checkpoint, slide or proprietary acquisition has been exhaustively validated.
+That inventory remains the October 22 snapshot. November V5c evidence is recorded
+separately in [saved-file checks](evidence/v5c_checks.json) and
+[focused test log](evidence/tests_v5c.txt), not silently merged into the old audit.
 
 ## Update after each major experiment
 
@@ -51,7 +59,8 @@ Never replace these markers with estimates presented as measured results.
 ## Reproduce the audit
 
 ```powershell
-.\.venv312\Scripts\python.exe thesis\tools\audit_repository.py --tests
+# Current saved-result verification (requires local data).
+.\.venv312\Scripts\python.exe thesis\tools\check_v5c_evidence.py
 .\.venv312\Scripts\python.exe thesis\tools\check_draft.py
 ```
 

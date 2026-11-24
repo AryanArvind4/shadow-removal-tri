@@ -4,6 +4,8 @@ import json
 from pathlib import Path
 import re
 
+from check_v5c_evidence import verify_saved
+
 import numpy as np
 from PIL import Image
 
@@ -76,14 +78,17 @@ def main():
     logs = [p.read_text(encoding='utf-8') for p in (THESIS / 'evidence').glob('tests_*.txt')]
     tests = sum(int(match.group(1)) for log in logs
                 if (match := re.search(r'Ran (\d+) tests? in ', log)))
+    v5c = verify_saved()
     report = dict(status='pass', local_links_checked=len(links), figure_count=len(figures),
                   figures=figures, document_words=words, saved_v5b_checks=checks,
                   source_hash_checks=source_checks, recorded_test_count=tests,
+                  saved_v5c_checks=v5c,
                   limitations='No human defect validation or true-background labeling. Local-link checks do not verify external URLs.')
     (THESIS / 'evidence/draft_checks.json').write_text(json.dumps(report, indent=2), encoding='utf-8')
     print(json.dumps({k: report[k] for k in ['status', 'local_links_checked', 'figure_count',
                                            'document_words', 'recorded_test_count']}, indent=2))
     print(f'Saved V5b invariant checks: {len(checks)} passed; source hashes match.')
+    print(f'Saved V5c invariant checks: {v5c["image_count"]} passed; snapshots match.')
 
 
 if __name__ == '__main__':
