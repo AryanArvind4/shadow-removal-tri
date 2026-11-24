@@ -1,5 +1,7 @@
 # Project Handoff
 
+Context tracking updated: 2026-11-24T16:42:13.484765+08:00 (Asia/Taipei).
+
 Verified working-state update: **24 November 2026 (Asia/Taipei)**.
 Repository: `E:\Shadow_Removal_SDE`; remote:
 `https://github.com/AryanArvind4/shadow-removal-tri.git`, branch `master`.
@@ -7,6 +9,14 @@ Use `git log -1` and `git status --short` for the current commit and pending wor
 this document intentionally does not embed its own commit ID.
 
 ## Immediate Task State
+
+Context maintenance now follows `CONTEXT_TRACKING.md` after every change task.
+`PROJECT_HISTORY.jsonl` is the append-only timestamped history; its recorder stamps
+this handoff automatically. `AGENTS.md` requires semantic updates, while
+`.githooks/pre-commit` rejects missing or stale records using staged-file hashes.
+Enable `core.hooksPath=.githooks` once per clone. This is task/commit tracking, not
+a watcher on every filesystem save. Include ignored artifact paths explicitly.
+Pipeline methods and image outputs are unchanged by this tooling addition.
 
 The user requested durable context, a thesis update and a GitHub push. This update
 documents the completed V5c study without changing its algorithm or outputs.

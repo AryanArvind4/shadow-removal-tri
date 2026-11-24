@@ -7,3 +7,9 @@ TRI_v5b/**/*.json text eol=lf
 TRI_v5c_2026-11-19/**/*.py text eol=lf
 TRI_v5c_2026-11-19/**/*.json text eol=lf
 TRI_v5c_2026-11-19/*.py text eol=lf
+# Context history/hook hashes must be stable on Windows and Linux.
+.githooks/* text eol=lf
+PROJECT_HANDOFF.md text eol=lf
+PROJECT_HISTORY.jsonl text eol=lf
+tools/project_context.py text eol=lf
+tools/tests/test_project_context.py text eol=lf

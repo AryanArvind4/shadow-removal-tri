@@ -18,5 +18,17 @@ local artifact locations, open questions and the next requested action.
 - Root `PROJECT_CONTEXT.md` and `HANDOFF_PROMPT_U29.md`, when present, are older
   unreviewed historical notes. Their "current" labels, global constraints and
   acquisition assertions are not authoritative for the present project.
-- After major work, update the handoff and thesis change log. Distinguish measured
-  results, qualitative observations, hypotheses and planned evaluation.
+- After EVERY completed change task, update the relevant sections of
+  `PROJECT_HANDOFF.md`, then record a timestamped entry in `PROJECT_HISTORY.jsonl`
+  using `tools/project_context.py record`. Follow `CONTEXT_TRACKING.md` for the
+  stage/record/stage sequence. Record summary, validation (including not run),
+  next action and produced artifact paths, including ignored results/slides.
+- Also record new feedback/decisions that change the project direction. Read-only
+  questions need no entry unless they establish a new decision. Before a pause or
+  handoff, record partial progress and what is unfinished; never mark it complete.
+- Update the thesis change log for substantive research changes, not every small
+  tooling edit. Distinguish measured results, observations, hypotheses and plans.
+- The context hook must remain enabled (`git config core.hooksPath .githooks`).
+  Never use `--no-verify` or disable it to bypass a stale-context error. New clones
+  need this local setup once. Semantic context must be written by the agent;
+  timestamps/file hashes are automated, not an automatic scientific interpretation.

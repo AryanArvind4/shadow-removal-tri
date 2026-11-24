@@ -1,0 +1,13 @@
+#!/bin/sh
+set -eu
+root=$(git rev-parse --show-toplevel)
+cd "$root"
+if [ -x .venv312/Scripts/python.exe ]; then
+    exec .venv312/Scripts/python.exe tools/project_context.py check
+elif [ -x .venv312/bin/python ]; then
+    exec .venv312/bin/python tools/project_context.py check
+elif command -v python >/dev/null 2>&1; then
+    exec python tools/project_context.py check
+else
+    exec python3 tools/project_context.py check
+fi
